@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <style class="vjs-styles-defaults">
         .video-js {
             width: 300px;
             height: 150px;
         }
-        
         .vjs-fluid {
             padding-top: 56.25%
         }
@@ -25,213 +23,11 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/carousel/carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-
+    <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
 </head>
-
-
 <body cz-shortcut-listen="true">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
-            <a class="navbar-brand" href="#"><img style="height: 80px; width: 80px;" src="./images/logo.png" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-            <div style="float: right;" class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"> <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a> </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Computer Science</a></li>
-                            <li><a class="dropdown-item" href="#">Electronics</a></li>
-                            <li><a class="dropdown-item" href="#">Political Sciences</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a role="button" id="loginDept" class="dropdown-item" href="#">Login as Department</a></li>
-                            <li><a role="button" id="loginAdmin" class="dropdown-item" href="#">Login as Administrator</a></li>
-                            <li><a role="button" id="loginTech" class="dropdown-item" href="#">Login as Teacher</a></li>
-                            <li><a role="button" id="loginStu" class="dropdown-item" href="#">Login as Student</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-
-    <!-- ******************* Login Model As Department ****************************-->
-
-
-    <div id="loginDeptModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title ">Login As Department</h4>
-                    <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- ******************* Login Model As Administrator ****************************-->
-
-
-    <div id="loginAdminModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title ">Login As Administrator</h4>
-                    <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ******************* Login Model As Teacher ****************************-->
-
-
-    <div id="loginTechModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title ">Login As Teacher</h4>
-                    <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ******************* Login Model As Student ****************************-->
-
-
-    <div id="loginStuModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title ">Login As Student</h4>
-                    <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+<?php include"./components/Header.html"?>
     <!-- ******************* Add Teacher ****************************-->
-
-
     <div id="addTechModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -241,9 +37,7 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="row row-content ">
-
                         <div class="col-12 col-md-10 offset-1">
                             <div>
                                 <h3>Add a Teacher record</h3>
@@ -252,20 +46,20 @@
                             <form>
                                 <div class="row form-group">
                                     <label for="forEmail" class="clo-12 col-md-4">
-                                                <b>Teacher ID</b>
-                                            </label>
+                                        <b>Teacher ID</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="ID" class="form-control " id="teachID" name="teachID" placeholder="Teacher's ID" required>
                                     </div>
                                     <label for="tName" class="clo-12 col-md-4">
-                                                <b>teachers Name</b>
-                                            </label>
+                                        <b>teachers Name</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="fname" placeholder="Teacher's Name" required>
                                     </div>
                                     <label for="lname" class="clo-12 col-md-4">
-                                                <b>Teacher's Designation</b>
-                                            </label>
+                                        <b>Teacher's Designation</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="lname" placeholder="Teacher's Designation" required>
                                     </div>
@@ -274,20 +68,11 @@
                                             <br>
                                             <button type="submit" id="addUser" value="submit" name="adduser" class="btn btn-info">Click here to add Teacher! </button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
-
-
-
                                         </div>
                                     </div>
-
                                 </div>
-
-
-
                             </form>
-
                         </div>
-
                     </div>
                     <div class="form-row">
                     </div>
@@ -295,11 +80,7 @@
             </div>
         </div>
     </div>
-
-
     <!-- ******************* Add Student ****************************-->
-
-
     <div id="addStuModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -309,9 +90,7 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="row row-content ">
-
                         <div class="col-12 col-md-10 offset-1">
                             <div>
                                 <h3>Add a Student record</h3>
@@ -320,20 +99,20 @@
                             <form>
                                 <div class="row form-group">
                                     <label for="forEmail" class="clo-12 col-md-4">
-                                                <b>Student ID</b>
-                                            </label>
+                                        <b>Student ID</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="ID" class="form-control " id="teachID" name="teachID" placeholder="Student's ID" required>
                                     </div>
                                     <label for="tName" class="clo-12 col-md-4">
-                                                <b>Student Name</b>
-                                            </label>
+                                        <b>Student Name</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="fname" placeholder="Student's Name" required>
                                     </div>
                                     <label for="lname" class="clo-12 col-md-4">
-                                                <b>Student's Degree Program</b>
-                                            </label>
+                                        <b>Student's Degree Program</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="lname" placeholder="Student's Degree Program" required>
                                     </div>
@@ -343,26 +122,16 @@
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="lname" placeholder="Student's Semester" required>
                                     </div>
-
                                     <div class="col-12 col-md-11">
                                         <div>
                                             <br>
                                             <button type="submit" id="addUser" value="submit" name="adduser" class="btn btn-info">Click here to add Teacher! </button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
-
-
-
                                         </div>
                                     </div>
-
                                 </div>
-
-
-
                             </form>
-
                         </div>
-
                     </div>
                     <div class="form-row">
                     </div>
@@ -370,13 +139,7 @@
             </div>
         </div>
     </div>
-
-
-
-
     <!-- ******************* Add Student ****************************-->
-
-
     <div id="addCourseModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -386,9 +149,7 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="row row-content ">
-
                         <div class="col-12 col-md-10 offset-1">
                             <div>
                                 <h3>Add a Course record</h3>
@@ -397,14 +158,14 @@
                             <form>
                                 <div class="row form-group">
                                     <label for="forEmail" class="clo-12 col-md-4">
-                                                <b>Course Code</b>
-                                            </label>
+                                        <b>Course Code</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="ID" class="form-control " id="teachID" name="teachID" placeholder="Course Code" required>
                                     </div>
                                     <label for="tName" class="clo-12 col-md-4">
-                                                <b>Course Name</b>
-                                            </label>
+                                        <b>Course Name</b>
+                                    </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="fname" placeholder="Course Name" required>
                                     </div>
@@ -420,26 +181,16 @@
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="search" name="lname" placeholder="Student's Semester" required>
                                     </div> -->
-
                                     <div class="col-12 col-md-11">
                                         <div>
                                             <br>
                                             <button type="submit" id="addUser" value="submit" name="adduser" class="btn btn-info">Click here to add Course! </button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
-
-
-
                                         </div>
                                     </div>
-
                                 </div>
-
-
-
                             </form>
-
                         </div>
-
                     </div>
                     <div class="form-row">
                     </div>
@@ -447,11 +198,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
     <main role="main">
         <!-- Marketing messaging and featurettes ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -463,90 +209,55 @@
             border: 0 none;
             color: #eee;
             height: 1px;
-            margin-bottom: 10px;"></hr>
+            margin-bottom: 10px;">
+                </hr>
             </div>
         </div>
-
         <div class="container">
             <div class="row row-content ">
-
                 <div class="col-12 col-md-4">
                     <div>
                         <h3>Manage Teacher Lists</h3>
                     </div>
                     <form>
                         <div class="row form-group">
-
                             <div class="col-12 col-md-10">
                                 <button type="button" id="manageTech" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage <br>Teacher Lists</button>
-
                             </div>
                         </div>
-
-
-
                     </form>
-
                 </div>
-
                 <div class="col-12 col-md-4 ">
                     <div>
                         <h3>Manage Student Lists</h3>
                     </div>
                     <form>
                         <div class="row form-group">
-
                             <div class="col-12 col-md-10">
                                 <button type="button" id="addStudent" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
                                     here Manage <br> Student Lists </button>
-
                             </div>
                         </div>
-
-
-
                     </form>
-
                 </div>
-
-
                 <div class="col-12 col-md-4 ">
                     <div>
                         <h3>Manage Courses Lists</h3>
                     </div>
                     <form>
                         <div class="row form-group">
-
                             <div class="col-12 col-md-10">
                                 <button type="button" id="addCourse" style="height: 150px; width: 100%;" class="btn btn-warning">Click
                                     here Manage <br> Courses Lists </button>
-
                             </div>
                         </div>
-
-
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
         <!-- ******************************************************** next row -->
-
-
-
-
     </main>
-
-
-
-
-
     <!-- ******************* Model Manage teacher ****************************-->
-
-
     <div id="manageTeacher" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -556,81 +267,53 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="container">
                         <div class="row row-content ">
-
                             <div class="col-12 col-md-4">
                                 <div>
                                     <h3>Add Teacher Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
-                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addTechModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here  </button>
-
+                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addTechModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View All Teacher Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
                                                 here </button>
-
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View Specific Teacher Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-warning">Click
-                                                here  </button>
-
+                                                here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <!-- ******************* Model Manage Student ****************************-->
-
-
     <div id="manageStudent" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -640,85 +323,53 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="container">
                         <div class="row row-content ">
-
                             <div class="col-12 col-md-4">
                                 <div>
                                     <h3>Add Student's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
-                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addStuModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here  </button>
-
+                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addStuModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View All Student's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
                                                 here </button>
-
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View Specific Student's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-warning">Click
-                                                here  </button>
-
+                                                here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
     <!-- ******************* Model Manage  Course's ****************************-->
-
-
     <div id="manageCourse" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -728,128 +379,54 @@
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
-
                     <div class="container">
                         <div class="row row-content ">
-
                             <div class="col-12 col-md-4">
                                 <div>
                                     <h3>Add Course's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
-                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addCourseModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here  </button>
-
+                                            <button type="button" id="addTeacher" data-dismiss="modal" data-toggle="modal" href="#addCourseModal" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View All Course's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
                                                 here </button>
-
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                             <div class="col-12 col-md-4 ">
                                 <div>
                                     <h3>View Specific Course's Data</h3>
                                 </div>
                                 <form>
                                     <div class="row form-group">
-
                                         <div class="col-12 col-md-10">
                                             <button type="submit" style="height: 150px; width: 100%;" class="btn btn-warning">Click
-                                                here  </button>
-
+                                                here </button>
                                         </div>
                                     </div>
-
-
-
                                 </form>
-
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    <footer>
-        <div class="footer ">
-            <div class="row ">
-                <div class="col-4 offset-1 col-sm-2 ">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled ">
-                        <li><a id="footer " href="index.html ">Home</a></li>
-                        <li><a id="footer " href="./aboutus.html ">Departments</a></li>
-                        <li><a id="footer " href="# ">Login</a></li>
-                        <li><a id="footer " href="./about.html ">About Us</a></li>
-                        <li><a id="footer " href="./contactus.html ">Contact Us</a></li>
-
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5 ">
-                    <h5>Our Address</h5>
-                    <address style="color:floralwhite ">
-                   Hostel Number 6, Quaid-I-Azam University Isalamabad <br>
-                    <i class="fa fa-phone fa-lg "></i>: +852 1234 5678<br>
-                    <i class="fa fa-fax fa-lg "></i>: +852 8765 4321<br>
-                    <i class="fa fa-envelope fa-lg "></i>:
-                    <a id="footer "href="mailto:confusion@food.net ">Qlms@hotmail.com</a>
-                </address>
-                </div>
-                <div style="padding-top: 50px; " class="col-12 col-sm-4 align-self-center ">
-                    <div class="template-demo "> <button type="button " class="btn btn-social-icon btn-facebook btn-rounded "><i class="fa fa-facebook "></i></button> <button type="button " class="btn btn-social-icon btn-youtube btn-rounded
-                                "><i class="fa fa-youtube "></i></button>
-                        <button type="button " class="btn btn-social-icon btn-twitter btn-rounded "><i class="fa fa-twitter "></i></button> <button type="button " class="btn btn-social-icon btn-dribbble btn-rounded "><i class="fa fa-dribbble
-                                "></i></button> <button type="button " class="btn btn-social-icon btn-linkedin btn-rounded "><i class="fa fa-linkedin "></i></button> <button type="button " class="btn btn-social-icon btn-instagram btn-rounded "><i class="fa fa-instagram "></i></button>                        </div>
-
-                </div>
-            </div>
-            <div class="row justify-content-center ">
-                <div class="col-auto ">
-                    <p>© Copyright 2020 Quaidian Learning Management System</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include "./components/Footer.html" ?>
 </body>
-
 <!-- Bootstrap core JavaScript ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
@@ -860,191 +437,10 @@
 <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js "></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js "></script> <svg xmlns="http://www.w3.org/2000/svg " width="500 " height="500 " viewBox="0 0 500 500 " preserveAspectRatio="none " style="display: none; visibility: hidden;
-                                position: absolute; top: -100%; left: -100%; "><defs><style type="text/css "></style></defs><text x="0 " y="25 " style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif ">500x500</text></svg></body>
-<script>
-    $("#loginDept ").click(function() {
-        $("#loginDeptModal ").modal();
-    })
-    $("#loginAdmin ").click(function() {
-        $("#loginAdminModal ").modal();
-    })
-    $("#loginTech ").click(function() {
-        $("#loginTechModal ").modal();
-    })
-    $("#loginStu ").click(function() {
-        $("#loginStuModal ").modal();
-    })
-    $("#manageTech").click(function() {
-        $("#manageTeacher").modal();
-    })
-    $("#addTecher").click(function() {
-
-        $("#addTechModal").modal();
-    })
-
-    $("#addStudent").click(function() {
-
-        $("#manageStudent").modal();
-    })
-    $("#addCourse").click(function() {
-
-        $("#manageCourse").modal();
-    })
-</script>
-
+                                position: absolute; top: -100%; left: -100%; ">
+    <defs>
+        <style type="text/css "></style>
+    </defs><text x="0 " y="25 " style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif ">500x500</text>
+</svg>
+<script src="./JS/scripts.js"></script>
 </html>
-
-<style>
-    .footer {
-        background-color: #212121;
-        margin: 0px auto;
-        padding: 50px 0px;
-        padding-bottom: 50px;
-    }
-    
-    body {
-        background-color: #31314C;
-        color: cornsilk;
-    }
-    
-    #myCarousel {
-        margin-top: 80px;
-    }
-    
-    #carousel-color {
-        color: #292b2c;
-    }
-    
-    .template-demo>.btn {
-        margin-right: 0.5rem !important
-    }
-    
-    .template-demo {
-        margin-top: 0.5rem !important
-    }
-    
-    .btn.btn-rounded {
-        border-radius: 50px
-    }
-    
-    .btn-outline-facebook {
-        border: 1px solid #3b579d;
-        color: #3b579d
-    }
-    
-    .btn-outline-facebook:hover {
-        background: #3b579d;
-        color: #ffffff
-    }
-    
-    .btn-outline-youtube {
-        border: 1px solid #e52d27;
-        color: #e52d27
-    }
-    
-    .btn-outline-twitter {
-        border: 1px solid #2caae1;
-        color: #2caae1
-    }
-    
-    .btn-outline-dribbble {
-        border: 1px solid #ea4c89;
-        color: #ea4c89
-    }
-    
-    .btn-outline-linkedin {
-        border: 1px solid #0177b5;
-        color: #0177b5
-    }
-    
-    .btn-outline-instagram {
-        border: 1px solid #dc4a38;
-        color: #dc4a38
-    }
-    
-    .btn-outline-twitter:hover {
-        background: #2caae1;
-        color: #ffffff
-    }
-    
-    .btn-outline-linkedin:hover {
-        background: #0177b5;
-        color: #ffffff
-    }
-    
-    .btn-outline-youtube:hover {
-        background: #e52d27;
-        color: #ffffff
-    }
-    
-    .btn-outline-instagram:hover {
-        background: #e52d27;
-        color: #ffffff
-    }
-    
-    .btn-facebook {
-        background: #3b579d;
-        color: #ffffff
-    }
-    
-    .btn-youtube {
-        background: #e52d27;
-        color: #ffffff
-    }
-    
-    .btn-twitter {
-        background: #2caae1;
-        color: #ffffff
-    }
-    
-    .btn-dribbble {
-        background: #ea4c89;
-        color: #ffffff
-    }
-    
-    .btn-linkedin {
-        background: #0177b5;
-        color: #ffffff
-    }
-    
-    .btn-instagram {
-        background: #dc4a38;
-        color: #ffffff
-    }
-    
-    .btn-facebook:hover,
-    .btn-facebook:focus {
-        background: #2d4278;
-        color: #ffffff
-    }
-    
-    .btn-youtube:hover,
-    .btn-youtube:focus {
-        background: #c21d17;
-        color: #ffffff
-    }
-    
-    .btn-twitter:hover,
-    .btn-twitter:focus {
-        background: #1b8dbf;
-        color: #ffffff
-    }
-    
-    .btn-dribbble:hover,
-    .btn-dribbble:focus {
-        background: #e51e6b;
-        color: #ffffff
-    }
-    
-    .btn-linkedin:hover,
-    .btn-linkedin:focus {
-        background: #015682;
-        color: #ffffff
-    }
-    
-    .btn-instagram:hover,
-    .btn-instagram:focus {
-        background: #bf3322;
-        color: #ffffff
-    }
-</style>
