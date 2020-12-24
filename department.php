@@ -32,7 +32,7 @@
 
 
 <body cz-shortcut-listen="true">
-<?php include "./components/Header.html" ?>
+    <?php include "./components/Header.html" ?>
 
 
     <main role="main">
@@ -61,8 +61,8 @@
                     <div class="row form-group">
 
                         <div class="col-12 col-md-6">
-                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage <br>General List </button>
-
+                            <a href="./inGeneralList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage 
+                            <br>General List </button> </a>
                         </div>
                     </div>
 
@@ -80,8 +80,8 @@
                     <div class="row form-group">
 
                         <div class="col-12 col-md-6">
-                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
-                                here Manage <br> Semester List </button>
+                            <a href="./inSemesterList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
+                                    here Manage <br> Semester List </button></a>
 
                         </div>
                     </div>
@@ -120,7 +120,7 @@
 </svg>
 
 
-<script src="./JS/scripts.js" ></script>
+<script src="./JS/scripts.js"></script>
 
 
 </html>
