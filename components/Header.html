@@ -14,7 +14,7 @@
                     </ul>
                     <header>
                         <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
-                            <a class="navbar-brand" href="../index.php"><img style="height: 80px; width: 80px;" src="./images/logo.png" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            <a class="navbar-brand" href="#"><img style="height: 80px; width: 80px;" src="./images/logo.png" /> </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                                 aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                             <div style="float: right;" class="collapse navbar-collapse" id="navbarCollapse">
                                 <ul class="navbar-nav mr-auto">
@@ -31,14 +31,17 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a role="button" id="loginDept" class="dropdown-item" href="#">Login as Department</a></li>
+                                            
                                             <li><a role="button" id="loginAdmin" class="dropdown-item" href="#">Login as Administrator</a></li>
+
+                                            <li><a role="button" id="loginDept" class="dropdown-item" href="#">Login as Department Manager</a></li>
+
                                             <li><a role="button" id="loginTech" class="dropdown-item" href="#">Login as Teacher</a></li>
                                             <li><a role="button" id="loginStu" class="dropdown-item" href="#">Login as Student</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="./about.php">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="./contact.php">Contact us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -49,8 +52,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a role="button" id="loginDept" class="dropdown-item" href="#">Login as Department</a></li>
+                        
                         <li><a role="button" id="loginAdmin" class="dropdown-item" href="#">Login as Administrator</a></li>
+                        <li><a role="button" id="loginDept" class="dropdown-item" href="#">Login as Department Manager</a></li>
                         <li><a role="button" id="loginTech" class="dropdown-item" href="#">Login as Teacher</a></li>
                         <li><a role="button" id="loginStu" class="dropdown-item" href="#">Login as Student</a></li>
                     </ul>
@@ -70,19 +74,19 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title ">Login As Department</h4>
+                <h4 class="modal-title ">Login As Department Manager</h4>
                 <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="./Classes/ManagerLogin.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"  name="mail" placeholder="Enter email" required>
                         </div>
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" name="psd" placeholder="Password" minlength="4" maxlength="8" required>
                         </div>
                         <div class="col-sm-auto">
                             <div class="form-check">
@@ -94,7 +98,8 @@
                     </div>
                     <div class="form-row">
                         <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1" name="Log">Sign in
+                        </button>
                     </div>
                 </form>
             </div>
@@ -116,15 +121,17 @@
                 <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="./Classes/Login.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email" required>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                            name="mail" placeholder="Enter email" required>
                         </div>
                         <div class="form-group col-sm-4">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password" minlength="4" maxlength="8" required>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                            name="psd" placeholder="Password" minlength="4" maxlength="8" required>
                         </div>
                         <div class="col-sm-auto">
                             <div class="form-check">
@@ -136,7 +143,7 @@
                     </div>
                     <div class="form-row">
                         <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        <button type="submit" class="btn btn-primary btn-sm ml-1" name="Log">Sign in</button>
                     </div>
                 </form>
             </div>

@@ -26,14 +26,13 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/carousel/carousel.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
-   
-        
+
 
 </head>
 
 
 <body cz-shortcut-listen="true">
-    <?php include "./components/Header.html" ?>
+<?php include "./components/Header.html" ?>
 
 
     <main role="main">
@@ -52,9 +51,6 @@
             </div>
         </div>
 
-
-
-
         <div class="row row-content ">
 
             <div class="col-12 col-md-5 offset-2">
@@ -65,8 +61,8 @@
                     <div class="row form-group">
 
                         <div class="col-12 col-md-6">
-                            <a href="./inGeneralList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage 
-                            <br>General List </button> </a>
+                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage <br>General List </button>
+
                         </div>
                     </div>
 
@@ -84,8 +80,8 @@
                     <div class="row form-group">
 
                         <div class="col-12 col-md-6">
-                            <a href="./inSemesterList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
-                                    here Manage <br> Semester List </button></a>
+                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
+                                here Manage <br> Semester List </button>
 
                         </div>
                     </div>
@@ -124,7 +120,7 @@
 </svg>
 
 
-<script src="./JS/scripts.js"></script>
+<script src="./JS/scripts.js" ></script>
 
 
 </html>

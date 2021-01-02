@@ -40,10 +40,10 @@
                     <div class="row row-content ">
                         <div class="col-12 col-md-10 offset-1">
                             <div>
-                                <h3>Add User Account</h3>
+                                <h3>  Add User Account</h3>
                             </div>
                             <!-- <form method="POST" action="addUser.php"> -->
-                            <form>
+                            <form action="./Classes/AddUser.php" method="POST">
                                 <div class="row form-group">
                                     <label for="forEmail" class="clo-12 col-md-4">
                                         <b>Email</b>
@@ -55,13 +55,13 @@
                                         <b>Password</b>
                                     </label>
                                     <div class="col-12 col-md-8">
-                                        <input type="password" class="form-control " id="secret" name="secret" placeholder="Password" required>
+                                        <input type="password" class="form-control " id="secret" name="secret" placeholder="Password" minlength="4" maxlength="8" required>
                                     </div>
                                     <label for="acctype" class="clo-12 col-md-4">
                                         <b>Account Type</b>
                                     </label>
                                     <div class="col-12 col-md-8">
-                                        <select class="form-control" id="choice">
+                                        <select class="form-control" id="choice" name="type">
                                             <option>Teacher</option>
                                             <option>Student</option>
                                             <option>Department Manager</option>
@@ -70,7 +70,7 @@
                                     <div class="col-12 col-md-11">
                                         <div>
                                             <br>
-                                            <button type="submit" id="addUser" value="submit" name="adduser" class="btn btn-info">Click here to add User! </button>
+                                            <button type="submit" id="addUser" value="submit" name="adduser" class="btn btn-info">Add User Account </button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title ">Select User</h4>
+                    <h4 class="modal-title ">View User</h4>
                     <button type="button" class="close" data-dismiss="modal" id="modal-button">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -99,7 +99,7 @@
                                 <h3>View Specific User Account</h3>
                             </div>
                             <!-- <form method="POST" action="addUser.php"> -->
-                            <form>
+                            <form action="./Classes/ViewUser.php" method="POST">
                                 <div class="row form-group">
                                     <label for="forEmail" class="clo-12 col-md-4">
                                         <b>Enter Email</b>
@@ -110,7 +110,7 @@
                                     <div class="col-12 col-md-11">
                                         <div>
                                             <br>
-                                            <button type="submit" id="selectUser" value="submit" name="selectUser" class="btn btn-info">View User</button>
+                                            <button type="submit" id="selectUser" value="submit" name="search" class="btn btn-info">View User</button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
@@ -139,24 +139,41 @@
                                 <h3>Add Department</h3>
                             </div>
                             <!-- <form method="POST" action="addUser.php"> -->
-                            <form>
+                            <form action="./Classes/AddDepartment.php" method="POST">
                                 <div class="row form-group">
-                                    <label for="forDeptNo" class="clo-12 col-md-4">
-                                        <b>Enter Department Number</b>
+                                <!--    <label for="forDeptNo" class="clo-12 col-md-4">
+                                        <b>Department Number</b>
                                     </label>
                                     <div class="col-12 col-md-8">
-                                        <input type="text" class="form-control " id="deptNo" name="deptNo" placeholder="Department No." required>
-                                    </div>
+                                        <input type="number" class="form-control " id="deptNo" name="deptNo" placeholder="Department No" minlength="1" maxlength="3" 
+                                        min="1" required>
+                                    </div> --->
                                     <label for="forDeptName" class="clo-12 col-md-4">
-                                        <b>Enter Department Name</b>
+                                        <b>Department Name</b>
                                     </label>
                                     <div class="col-12 col-md-8">
                                         <input type="text" class="form-control " id="deptName" name="deptName" placeholder="Department Name" required>
                                     </div>
+                                  
+                                     <label for="forDeptMang" class="clo-12 col-md-4">
+                                        <b>Manager Email</b>
+                                    </label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="email" class="form-control " id="DeptMang" name="deptManager" placeholder="Department Manager Email" required>
+                                    </div>
+
+                                    <label for="forDeptMName" class="clo-12 col-md-4">
+                                        <b>Manager Name</b>
+                                    </label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" class="form-control " id="forDeptMName" name="deptMName" placeholder="Department Manager Name" required>
+                                    </div>
+
+
                                     <div class="col-12 col-md-11">
                                         <div>
                                             <br>
-                                            <button type="submit" id="selectUser" value="submit" name="selectUser" class="btn btn-info">Add Department</button>
+                                            <button type="submit" id="selectUser" value="submit" name="AddDept" class="btn btn-info">Add Department</button>
                                             <button type="button" class="btn btn-secondary " data-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
@@ -201,26 +218,26 @@
                 </div>
                 <div class="col-12 col-md-4 ">
                     <div>
-                        <h3>View User Account</h3>
+                        <h3>  View User Account</h3>
                     </div>
                     <form>
                         <div class="row form-group">
                             <div class="col-12 col-md-10">
                                 <button type="button" style="height: 150px; width: 100%;" class="btn btn-twitter" data-toggle="modal" data-target="#ViewUserModal">Click
-                                    here View <br> User Accounts </button>
+                                    Here To View <br> User Accounts </button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-12 col-md-4 ">
                     <div>
-                        <h3>Add Department Account</h3>
+                        <h3>Add Department</h3>
                     </div>
                     <form>
                         <div class="row form-group">
                             <div class="col-12 col-md-10">
                                 <button type="button" style="height: 150px; width: 100%;" class="btn btn-warning" data-toggle="modal" data-target="#AddDept">Click
-                                    here to Add <br> Department Accounts </button>
+                                    Here To Add <br> Department</button>
                             </div>
                         </div>
                     </form>
@@ -254,11 +271,12 @@
                             <div class="col-12 col-md-6">
                                 <div>
                                     <h3>View All User Accounts</h3>
+                                    <br>
                                 </div>
-                                <form>
+                                <form action="./Classes/ViewAllUsers.php" method="POST">
                                     <div class="row form-group">
                                         <div class="col-12 col-md-10">
-                                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
+                                            <button type="submit" style="height: 150px; width: 100%;" class="btn btn-twitter" name="view">Click
                                                 here </button>
                                         </div>
                                     </div>
