@@ -46,7 +46,12 @@ class Account
           $db->ManagerLogIn($this);
 	}
 
+	function studentAccount()
+	{
 
+		  $db=new DBFacadeStudent();
+          $db->StudentLogIn($this);
+	}
 
 }
 ?>

@@ -26,3 +26,13 @@ $("#addCourse").click(function() {
 
     $("#manageCourse").modal();
 })
+
+$("#viewAssignment").click(function() {
+
+    $("#viewAssignmentModal").modal();
+})
+
+$("#viewLecture").click(function() {
+
+    $("#viewLectureModal").modal();
+})
