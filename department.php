@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +39,21 @@
 <body cz-shortcut-listen="true">
     <?php include "./components/Header.html" ?>
 
+    <?php require_once './Classes/Department.php';
+            // require_once './Classes/DBFacadeManager.php';
+            
+            // $manager->Display();
 
+
+        // $var = $manager->getDeptName();
+        // $var =  new Department($name,'','');
+
+        // $var->Display();
+        // echo  "$var";?>
+    
+    
+
+    
     <main role="main">
         <!-- Marketing messaging and featurettes ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -51,6 +69,16 @@
                 </hr>
             </div>
         </div>
+
+
+
+        <?php 
+
+        $object =  unserialize($_SESSION['manager']);
+
+        // print_r($object);
+        echo "$object";
+?>
 
 
 
