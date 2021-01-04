@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,28 +35,14 @@ session_start();
 <body cz-shortcut-listen="true">
     <?php include "./components/Header.html" ?>
 
-    <?php require_once './Classes/Department.php';
-            // require_once './Classes/DBFacadeManager.php';
-            
-            // $manager->Display();
 
-
-        // $var = $manager->getDeptName();
-        // $var =  new Department($name,'','');
-
-        // $var->Display();
-        // echo  "$var";?>
-    
-    
-
-    
     <main role="main">
         <!-- Marketing messaging and featurettes ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
         <!-- Three columns of text below the carousel -->
         <div class="about-header">
             <div class="col-lg-12 text-center">
-                <h1>Department Manager</h1>
+                <h1>Courses List</h1>
                 <hr style="background-color: #eee;
             border: 0 none;
             color: #eee;
@@ -72,29 +54,18 @@ session_start();
 
 
 
-        <?php 
-
-        $object =  unserialize($_SESSION['manager']);
-
-        // print_r($object);
-        echo "$object";
-?>
-
-
-
 
         <div class="row row-content ">
 
-            <div class="col-12 col-md-5 offset-2">
-                <div>
-                    <h3>Manage General Lists</h3>
-                </div>
+            <div class="col-12 col-md-3 offset-2">
+               <!-- <div>
+                    <h3>Software Construction</h3>
+                </div>-->
                 <form>
                     <div class="row form-group">
 
-                        <div class="col-12 col-md-6">
-                            <a href="./inGeneralList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-success ">Click Here To Manage 
-                            <br>General List </button> </a>
+                        <div class="col-12 col-md-8">
+                            <a href="#"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-success ">Software<br>Construction</button> </a>
                         </div>
                     </div>
 
@@ -104,26 +75,37 @@ session_start();
 
             </div>
 
-            <div class="col-12 col-md-5 ">
-                <div>
-                    <h3>Manage Semester Lists</h3>
-                </div>
+            <div class="col-12 col-md-3 ">
+               <!-- <div>
+                    <h3>Analysis and Design </h3>
+                </div>-->
                 <form>
                     <div class="row form-group">
 
-                        <div class="col-12 col-md-6">
-                            <a href="./inSemesterList.php"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-twitter">Click
-                                    here Manage <br> Semester List </button></a>
+                        <div class="col-12 col-md-8">
+                            <a href="#"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-twitter">Operating Systems</button></a>
 
                         </div>
                     </div>
-
-
-
                 </form>
 
             </div>
 
+            <div class="col-12 col-md-3 ">
+               <!-- <div>
+                    <h3>Analysis and Design </h3>
+                </div>-->
+                <form>
+                    <div class="row form-group">
+
+                        <div class="col-12 col-md-8">
+                            <a href="#"> <button type="button" style="height: 150px; width: 100%;" class="btn btn-dark">Analysis and Design<br>of Algorithms</button></a>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
 
         <!-- ******************************************************** next row -->

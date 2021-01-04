@@ -1,4 +1,8 @@
+
+
 <?php
+
+session_start();
 
 include("./Department.php");
   
@@ -19,7 +23,6 @@ class DBFacadeManager
     }
 
 
-
     function ManagerLogIn($account)
     {
          $mail=$account->getMail();
@@ -31,28 +34,28 @@ class DBFacadeManager
        $query = " SELECT * FROM Account WHERE Email =  '$mail'AND Type='Department Manager' ";
        $result = mysqli_query($conn,$query);
 
-     
-      
-       $row = mysqli_fetch_array($result);
-
-       if($result )
+       if(mysqli_num_rows($result)!= 0 )
        {
 
-           $row = mysqli_fetch_array($result);
+           $row = mysqli_fetch_assoc($result);
 
            if($row['Password']== "$pwd")
            {
               $query2 = " SELECT * FROM Dept WHERE ManagerID =  '$mail' ";
               $res = mysqli_query($conn,$query2);
 
-              $row = mysqli_fetch_array($res);
+              $row = mysqli_fetch_assoc($res);
 
                $manager = new Department($row['DeptName'], $row['ManagerID'], $row['ManagerName']);
               // $manager->Display();
 
-               $name=$row['DeptName'];
+               $name=$manager->getDeptName();
              
-             
+            
+
+               $_SESSION['manager'] = serialize($name);
+            
+            
              header("location: ../department.php");
                     
 
